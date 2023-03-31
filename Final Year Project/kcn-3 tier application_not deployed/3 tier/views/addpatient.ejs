@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <title><%=HospitalName%>
+            - Add patient</title>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+    <body>
+        <header>
+            <div class="searchbar">
+                <form action="/search-result" method="GET">
+                    <input
+                    id="search-box" type="text" name="keyword" value="">
+                <!-- <input type="submit" value="Search"> -->
+                </form>
+            </div>
+        </header>
+        <div class="row">
+            <div class="column left">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index">Home</a>
+                        </li>
+                        <li>
+                            <a href="about">About</a>
+                        </li>
+                        <li>
+                            <a href="eyeconditions">Keratoconus</a>
+                        </li>
+                        <li>
+                            <a href="patients">List all patients</a>
+                        </li>
+                        <li>
+                            <a href="addpatient">Add a New patient</a>
+                        </li>
+                        <!-- <li><a href="search">Search for a patient</a></li> -->
+                        <li>
+                            <a href="updatepatient">Update a patient record</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column right">
+
+                <div class="form">
+                    <form method="POST" action="/patientadded">
+                        <h1>Add a new patient</h1>
+                        <br>
+                        <br>
+                        <label for="firstname">First Name</label>
+                        <input id="firstname" type="text" name="firstname" value="<%=firstname%>">
+                        <br>
+                        <br>
+                        <label for="surname">Last Name</label>
+                        <input id="surname" type="text" name="surname" value="<%=surname%>">
+                        <br>
+                        <br>
+                        <label for="dob">Date of Birth</label>
+                        <input id="dob" type="date" name="dob" value="<%=dob%>">
+                        <br>
+                        <br>
+                        <label for="sex">Sex</label>
+                        <input id="sex" type="text" name="sex" value="<%=sex%>">
+                        <br>
+                        <br>
+                        <label for="race">Ethnicity</label>
+                        <input id="race" type="text" name="race" value="<%=race%>">
+                        <br>
+                        <br>
+                        <input type="submit" value="Add patient"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <p>Keratoconus Detection via Computer Vision- Final Year Project- 2022-2023 Goldsmiths University, Sandor Kanda- All rights reserved.</p>
+        </footer>
+    </body>
+</html>

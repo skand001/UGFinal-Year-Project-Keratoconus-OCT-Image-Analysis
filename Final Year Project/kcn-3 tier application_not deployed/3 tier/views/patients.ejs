@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <title><%=HospitalName%>
+            - patients</title>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+    <body>
+        <header>
+            <div class="searchbar">
+                <form action="/search-result" method="GET">
+                    <input
+                    id="search-box" type="text" name="keyword" value="">
+                <!-- <input type="submit" value="Search"> -->
+                </form>
+            </div>
+        </header>
+        <div class="row">
+            <div class="column left">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index">Home</a>
+                        </li>
+                        <li>
+                            <a href="about">About</a>
+                        </li>
+                        <li>
+                            <a href="eyeconditions">Keratoconus</a>
+                        </li>
+                        <li>
+                            <a href="patients">List all patients</a>
+                        </li>
+                        <li>
+                            <a href="addpatient">Add a New patient</a>
+                        </li>
+                        <!-- <li><a href="search">Search for a patient</a></li> -->
+                        <li>
+                            <a href="updatepatient">Update a patient record</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column right">
+                <h1>Patient List</h1>
+                <table>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Born</th>
+                        <th>Age</th>
+                        <th>Sex</th>
+                        <th>Ethnicity</th>
+                    </tr>
+                    <% patients.forEach(function(patient) { %>
+                        <tr>
+                            <td><%= patient.patient_id %></td>
+                            <td><%= patient.firstname %></td>
+                            <td><%= patient.surname %></td>
+                            <td><%= patient.dob.toLocaleDateString('en-US') %></td>
+                            <td><%= patient.age %></td>
+                            <td><%= patient.sex %></td>
+                            <td><%= patient.race %></td>
+                        </tr>
+                    <% }) %>
+                </table>
+            </div>
+        </div>
+        <footer id="footer">
+            <p>Keratoconus Detection via Computer Vision- Final Year Project- 2022-2023 Goldsmiths University, Sandor Kanda- All rights reserved.</p>
+        </footer>
+    </body>
+</html>

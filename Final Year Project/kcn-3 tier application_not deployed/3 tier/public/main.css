@@ -1,0 +1,314 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding-left: 50px;
+    padding-right: 80px;
+}
+
+/* Text Styling */
+h1,
+h2,
+p,
+li,
+table,
+th,
+td,
+label,
+input {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin: 50px auto 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: lighter;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+}
+
+li {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+li {
+    font-size: 24px;
+    text-decoration: none;
+    font: bolder;
+    width: inherit;
+    list-style: none;
+    padding-top: 9px;
+    color: rgb(0, 0, 0);
+    height: 60px;
+    border-radius: 25px;
+}
+
+/* Menu links*/
+a:link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* visited link */
+a:visited {
+    color: rgb(78, 69, 69);
+    text-decoration: none;
+    padding: 5px;
+    box-shadow: darkgrey;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content header {
+    width: calc(100% -500px);
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.left a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: rgb(2, 2, 2);
+    transition: font-size 0.5s;
+  
+}
+
+.left li:hover {
+    background-color: lightgray;
+    font-size: 22px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.searchbar #search-box {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: auto;
+    height: 40px;
+    margin-top: 40px;
+    border-radius: 18px;
+}
+
+/* Table elements */
+table,
+th,
+td {
+    border: 0.45px solid #282727;
+    border-collapse: collapse;
+    font-weight: normal;
+    padding: 6%;
+    font-size: larger;
+    margin: 0 auto;
+}
+
+th {
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+tr:hover {
+    background-color: rgba(158, 156, 156, 0.685);
+    cursor: pointer;
+}
+
+/* flexbox */
+* {
+    box-sizing: border-box;
+}
+
+/* columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left {
+    width: 30%;
+    display: block;
+    padding: 70px 0 0 70px;
+    /* width: 530px; */
+    float: left;
+    height: inherit;
+    align-items: center;
+    list-style: none;
+    letter-spacing: 1.2px;
+}
+
+.right {
+    width: 70%;
+    padding-left: 10%;
+    padding-top: 50px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.aboutText {
+    text-align: justify;
+    line-height: 1.8;
+    letter-spacing: 1.2px;
+}
+
+/* Login and Register form styling */
+form {
+    vertical-align: middle;
+}
+
+div.form {
+    width: 15cm;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px auto 0;
+}
+
+label {
+    width: 140px;
+    display: inline-block;
+    margin: 0.2cm;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Input field */
+input {
+    padding: 4px 10px;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: rgba(185, 183, 181, 0.249);
+}
+
+input#submit {
+    margin-top: 15px;
+    padding: 2px;
+    font-weight: bold;
+    background-color: beige;
+    width: 150px;
+    box-shadow: rgb(2, 2, 2);
+}
+
+/*image postioning on loggedin.ejs*/
+img {
+    width: 300px;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 20%;
+    -webkit-animation: animatezoom 0.8s;
+    animation: animatezoom 1s;
+}
+
+#smallPic {
+    width: 10%;
+    height: auto;
+    float: left;
+}
+/*Mainpage logo animation */
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+/* password toggle */
+#password {
+
+    background-image: url("https://img.icons8.com/material-sharp/20/000000/visible.png");
+    background-position: 97% center;
+    background-repeat: no-repeat;
+}
+
+#password.visible {
+    background-image: url("https://img.icons8.com/material-outlined/20/000000/invisible.png");
+
+}
+
+#toggle-password {
+    display: none;
+}
+
+#toggle-password + label {
+    text-indent: -9999px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: -32px;
+    cursor: pointer;
+
+}
+
+#footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #F1F1F1;
+    text-align: left;
+    font-size: 10px;
+
+
+}
+
+#keratoconus {
+    float: left;
+    margin-right: 100px;
+    margin-top: 10%;
+    margin-bottom: 50%;
+
+}
+
+.middle_text {
+    float: left;
+    text-align: justify;
+}

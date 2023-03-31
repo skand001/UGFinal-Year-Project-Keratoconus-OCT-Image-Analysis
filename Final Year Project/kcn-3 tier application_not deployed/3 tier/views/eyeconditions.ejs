@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <title><%=HospitalName%>
+            - Eye Conditions</title>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+    <header>
+        <div class="searchbar">
+            <form action="/search-result" method="GET">
+                <input
+                id="search-box" type="text" name="keyword" value="">
+            <!-- <input type="submit" value="Search"> -->
+            </form>
+        </div>
+    </header>
+    <body>
+        <div class="row">
+            <div class="column left">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index">Home</a>
+                        </li>
+                        <li>
+                            <a href="about">About</a>
+                        </li>
+                        <li>
+                            <a href="eyeconditions">Keratoconus</a>
+                        </li>
+                        <li>
+                            <a href="patients">List all patients</a>
+                        </li>
+                        <li>
+                            <a href="addpatient">Add a New patient</a>
+                        </li>
+                        <!-- <li><a href="search">Search for a patient</a></li> -->
+                        <li>
+                            <a href="updatepatient">Update a patient record</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column right">
+                <div class="middle_text">
+                    
+                    <img id="keratoconus" src="https://doc.gold.ac.uk/~skand001/Keratoconus.jpg" alt="image of an artifial human eye">
+                    <h1>What is Keratoconus?</h1>
+                    <p>Keratoconus is a non-inflammatory eye condition in which the normally round dome-shaped clear window of the eye (cornea) progressively thins causing a cone-like bulge to develop. 
+                    This eventually impairs the ability of the eye to focus properly, potentially causing poor vision.</p>
+                    <h1>What causes keratoconus and who gets it?</h1>
+                    <p>The exact cause is unknown. It is believed that genetics and environmental factors play a role. 
+                    It is not generally considered an inherited disease, although rarely in some families more than one individual can be affected. 
+                    Depending on ethnicity, keratoconus affects up to one in 450 people. It is more common in non-caucasians. 
+                    It is usually diagnosed in young people at puberty, in their late teens or early twenties.</p>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <p>Keratoconus Detection via Computer Vision- Final Year Project- 2022-2023 Goldsmiths University, Sandor Kanda- All rights reserved.</p>
+        </footer>
+    </body>
+</html>
